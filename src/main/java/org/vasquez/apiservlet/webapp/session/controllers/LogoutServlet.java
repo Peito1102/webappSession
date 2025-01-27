@@ -1,11 +1,10 @@
-package org.vasquez.apiservlet.webapp.cookies.controllers;
+package org.vasquez.apiservlet.webapp.session.controllers;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import org.vasquez.apiservlet.webapp.cookies.services.LoginService;
-import org.vasquez.apiservlet.webapp.cookies.services.LoginServiceCookieImpl;
-import org.vasquez.apiservlet.webapp.cookies.services.LoginServiceSessionImpl;
+import org.vasquez.apiservlet.webapp.session.services.LoginService;
+import org.vasquez.apiservlet.webapp.session.services.LoginServiceSessionImpl;
 
 import java.io.IOException;
 import java.util.Optional;

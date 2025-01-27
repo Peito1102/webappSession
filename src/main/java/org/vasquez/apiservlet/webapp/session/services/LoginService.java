@@ -1,4 +1,4 @@
-package org.vasquez.apiservlet.webapp.cookies.services;
+package org.vasquez.apiservlet.webapp.session.services;
 
 import jakarta.servlet.http.HttpServletRequest;
 

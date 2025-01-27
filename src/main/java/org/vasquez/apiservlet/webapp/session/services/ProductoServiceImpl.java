@@ -1,9 +1,10 @@
-package org.vasquez.apiservlet.webapp.cookies.services;
+package org.vasquez.apiservlet.webapp.session.services;
 
-import org.vasquez.apiservlet.webapp.cookies.models.Producto;
+import org.vasquez.apiservlet.webapp.session.models.Producto;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class ProductoServiceImpl implements ProductoService {
 
@@ -12,5 +13,10 @@ public class ProductoServiceImpl implements ProductoService {
         return Arrays.asList(new Producto(1L,"notebook","computación",175000),
                 new Producto(2L,"mesa escritorio","oficina",100000),
                 new Producto(3L,"teclado mecánico","computación",40000));
+    }
+
+    @Override
+    public Optional<Producto> findById(Long id) {
+        return listar().stream().filter(p -> p.getId().equals(id)).findAny();
     }
 }

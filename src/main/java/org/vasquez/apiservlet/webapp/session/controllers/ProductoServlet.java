@@ -1,12 +1,12 @@
-package org.vasquez.apiservlet.webapp.cookies.controllers;
+package org.vasquez.apiservlet.webapp.session.controllers;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.vasquez.apiservlet.webapp.cookies.models.Producto;
-import org.vasquez.apiservlet.webapp.cookies.services.*;
+import org.vasquez.apiservlet.webapp.session.models.Producto;
+import org.vasquez.apiservlet.webapp.session.services.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,6 +41,7 @@ public class ProductoServlet extends HttpServlet {
             out.println("                   <th>tipo</th>");
             if (usernameOptional.isPresent()) {
                 out.println("                   <th>precio</th>");
+                out.println("                   <th>agregar</th>");
             }
             out.println("               </tr>");
             productos.forEach(p -> {
@@ -50,6 +51,8 @@ public class ProductoServlet extends HttpServlet {
                 out.println("                   <td>" + p.getTipo() + "</td>");
                 if (usernameOptional.isPresent()){
                     out.println("                   <td>" + p.getPrecio() + "</td>");
+                    out.println("                   <td><a href=\""+ req.getContextPath()+
+                            "/agregar-carro?id="+ p.getId() +"\">agregar</a></td>");
                 }
                 out.println("               </tr>");
             });

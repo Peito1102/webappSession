@@ -1,4 +1,4 @@
-package org.vasquez.apiservlet.webapp.cookies.models;
+package org.vasquez.apiservlet.webapp.session.models;
 
 public class Producto {
     private Long id;
