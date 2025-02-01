@@ -1,4 +1,4 @@
-package org.vasquez.apiservlet.webapp.util;
+package org.vasquez.apiservlet.webapp.session.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
